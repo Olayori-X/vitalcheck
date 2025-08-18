@@ -33,7 +33,7 @@ const FormContent = () => {
     // simulate async work
     setTimeout(() => {
       setLoading(false);
-    }, 10000);
+    }, 2000);
     setResult(true);
   };
 
