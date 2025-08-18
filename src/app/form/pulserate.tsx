@@ -39,7 +39,7 @@ const StepTwo: React.FC<StepTwoProps> = ({ nextPage, selectedPR, setSelectedPR }
 
         {/* Content */}
         <div className={styles.content}>
-          <h1 className={styles.question}>What's your pulse rate?</h1>
+          <h1 className={styles.question}>{"What's your pulse rate?"}</h1>
 
           <div className={styles.options}>
             <label
