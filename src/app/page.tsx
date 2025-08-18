@@ -1,10 +1,13 @@
 'use client';
 import Image from "next/image";
 import styles from "./Home.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const startApp = () => {
     console.log("VitalCheck app starting...");
+    router.push("/form");
     // Add your app initialization logic here
   };
 
