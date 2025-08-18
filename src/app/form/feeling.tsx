@@ -1,9 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import styles from "./css/feeling.module.css";
-import next from "next";
 
 type StepThreeProps = {
   nextPage: () => void;
@@ -12,20 +7,6 @@ type StepThreeProps = {
   };
   
   const StepThree: React.FC<StepThreeProps> = ({ nextPage, selected, setSelected }) => {
-  const router = useRouter();
-
-  const handleNext = () => {
-    if (!selected) {
-      alert("Please select an option");
-      return;
-    }
-
-    // Store in localStorage
-    localStorage.setItem("feeling", selected);
-
-    // Navigate to processing page
-    router.push("/processing");
-  };
 
   return (
     <div className={styles.container}>

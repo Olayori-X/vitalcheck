@@ -1,7 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import styles from "./css/Bp.module.css";
 
 type StepTwoProps = {
@@ -11,27 +8,9 @@ type StepTwoProps = {
 };
 
 const StepTwo: React.FC<StepTwoProps> = ({ nextPage, selectedPR, setSelectedPR }) => {
-  const router = useRouter();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedPR(event.target.value);
-  };
-
-  const nextScreen = () => {
-    if (!selectedPR) {
-      alert("Please select your pulse rate");
-      return;
-    }
-
-    // Save answer into localStorage
-    const assessment = JSON.parse(
-      localStorage.getItem("vitalcheck_assessment") || "{}"
-    );
-    assessment.pulseRate = selectedPR;
-    localStorage.setItem("vitalcheck_assessment", JSON.stringify(assessment));
-
-    // Navigate to step three
-    router.push("/bp/step-three"); // ✅ adjust path to your next file
   };
 
   return (

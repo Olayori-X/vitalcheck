@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import styles from "./css/Bp.module.css";
 
 type StepOneProps = {
@@ -10,7 +9,6 @@ type StepOneProps = {
 
 const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }) => {
   // const [selectedBP, setSelectedBP] = useState<string>("");
-  const router = useRouter();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedBP(event.target.value);
@@ -40,7 +38,7 @@ const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }
         </div>
 
         <div className={styles.content}>
-          <h1 className={styles.question}>What's your BP?</h1>
+          <h1 className={styles.question}>{"What's your BP?"}</h1>
 
           <div className={styles.options}>
             <label className={styles.option} htmlFor="high">

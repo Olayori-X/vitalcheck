@@ -1,19 +1,7 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import styles from "./css/Processing.module.css";
 
 const ProcessingPage = () => {
-  const router = useRouter();
-
-  // Redirect after 3 seconds
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       router.push("/result"); // ✅ your result page
-//     }, 3000);
-
-//     return () => clearTimeout(timer);
-//   }, [router]);
-
   return (
     <div className={styles.body}>
       <div className={styles.header}>
