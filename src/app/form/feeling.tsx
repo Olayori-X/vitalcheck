@@ -80,7 +80,7 @@ type StepThreeProps = {
           </label>
         </div>
 
-        <button className={styles.nextButton} onClick={nextPage}>
+        <button className={styles.nextButton} onClick={nextPage} disabled={!selected}>
           Next
         </button>
       </div>

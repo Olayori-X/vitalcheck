@@ -93,7 +93,7 @@ const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }
             </label>
           </div>
 
-          <button className={styles["next-button"]} onClick={nextPage}>
+          <button className={styles["next-button"]} onClick={nextPage} disabled={!selectedBP}>
             Next
           </button>
         </div>
