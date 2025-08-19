@@ -41,7 +41,12 @@ const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }
           <h1 className={styles.question}>{"What's your BP?"}</h1>
 
           <div className={styles.options}>
-            <label className={styles.option} htmlFor="high">
+            <label 
+              className={`${styles.option} ${
+                  selectedBP === "high" ? styles.selected : ""
+                }`}
+                htmlFor="high"
+              >
               <input
                 type="radio"
                 id="high"
@@ -53,7 +58,12 @@ const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }
               <span className={styles["option-label"]}>High</span>
             </label>
 
-            <label className={styles.option} htmlFor="normal">
+            <label 
+              className={`${styles.option} ${
+                  selectedBP === "normal" ? styles.selected : ""
+                }`}
+                htmlFor="normal"
+              >
               <input
                 type="radio"
                 id="normal"
@@ -65,7 +75,12 @@ const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }
               <span className={styles["option-label"]}>Normal</span>
             </label>
 
-            <label className={styles.option} htmlFor="low">
+            <label 
+              className={`${styles.option} ${
+                  selectedBP === "low" ? styles.selected : ""
+                }`}
+                htmlFor="low"
+              >
               <input
                 type="radio"
                 id="low"
@@ -78,7 +93,7 @@ const StepOne: React.FC<StepOneProps> = ({ nextPage, selectedBP, setSelectedBP }
             </label>
           </div>
 
-          <button className="next-button" onClick={nextPage}>
+          <button className={styles["next-button"]} onClick={nextPage}>
             Next
           </button>
         </div>

@@ -41,7 +41,7 @@ const FormContent = () => {
     if (selectedBP === 'high' && selectedPR === 'high' && selected === 'weak') {
         return 'Admit to Emergency Ward';
     }
-    if (selectedBP === 'high' && selectedPR === 'low' && selected === 'very_weak') {
+    if (selectedBP === 'high' && selectedPR === 'low' && selected === 'very-weak') {
         return 'Admit to Emergency Ward';
     }
     if (selectedBP === 'low' && selectedPR === 'low' && selected === 'weak') {

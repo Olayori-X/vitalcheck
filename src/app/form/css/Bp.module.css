@@ -100,7 +100,7 @@
 
     .option:hover {
         border-color: #28a745;
-        background-color: #f8fff9;
+        background-color: #28a745;
     }
 
     .option input[type="radio"] {
